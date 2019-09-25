@@ -1,7 +1,9 @@
 <template>
   <div class="row">
     <div class="col-md-4 col-md-offset-4 floating-box">
+
       <Message :show.sync="msgShow" :type="msgType" :msg="msg"/>
+
       <div class="panel panel-default">
         <div class="panel-heading">
           <h3 class="panel-title">请注册</h3>
