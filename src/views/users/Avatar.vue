@@ -2,26 +2,26 @@
   <div class="col-md-9 left-col">
     <div class="panel panel-default padding-md">
         <div class="panel-body">
-            <h2><i class="fa fa-picture-o"></i> 请输入头像地址</h2>
-        <hr>
-        <div data-validator-form>
-          <div class="form-group">
-            <label>头像预览：</label>
-            <div>
-              <img :src="avatar" class="avatar-preview-img">
+          <h2><i class="fa fa-picture-o"></i> 请输入头像地址</h2>
+          <hr>
+          <div data-validator-form>
+            <div class="form-group">
+              <label>头像预览：</label>
+              <div>
+                <img :src="avatar" class="avatar-preview-img">
+              </div>
             </div>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-8">
-              <input v-model.trim.lazy="avatar" v-validator.required="{ title: '头像地址' }" type="text" class="form-control avatar-input">
+            <div class="form-group row">
+              <div class="col-md-8">
+                <input v-model.trim.lazy="avatar" v-validator.required="{ title: '头像地址' }" type="text" class="form-control avatar-input">
+              </div>
+              <div class="clearfix"></div>
             </div>
-            <div class="clearfix"></div>
-          </div>
 
-          <div class="form-group">
-            <button type="submit" class="btn btn-lg btn-primary" @click="updateAvatar">上传头像</button>
+            <div class="form-group">
+              <button type="submit" class="btn btn-lg btn-primary" @click="updateAvatar">上传头像</button>
+            </div>
           </div>
-        </div>
         </div>
     </div>
   </div>

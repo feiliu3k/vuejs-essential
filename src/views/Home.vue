@@ -16,6 +16,7 @@ export default {
   },
   beforeRouteEnter(to, from, next) {
     const fromName = from.name
+    const logout = to.params.logout
 
     next(vm => {
       if (vm.$store.state.auth) {
