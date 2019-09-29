@@ -52,12 +52,6 @@ export default [
     component: () => import('@/views/articles/Create'),
     meta: { auth: true }
   },
-  // Content
-  {
-    path: '/articles/:articleId/content',
-    name: 'Content',
-    component: () => import('@/views/articles/Content')
-  },
 
   // Edit
   {
@@ -75,6 +69,11 @@ export default [
         path: '',
         name: 'Column',
         component: () => import('@/views/articles/List.vue')
+      },
+      {
+        path: '/articles/:articleId/content',
+        name: 'Content',
+        component: () => import('@/views/articles/Content.vue')
       }
     ]
   },
