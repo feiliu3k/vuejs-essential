@@ -43,4 +43,6 @@ $fa-font-path: "~font-awesome/fonts/";
 
 @import 'highlight.js/styles/paraiso-dark.css';
 
+@import "animate.css/animate.min.css";
+
 </style>
