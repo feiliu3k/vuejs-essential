@@ -21,26 +21,26 @@ export default [
   // 编辑资料路由
   {
     path: '/users/1/edit',
-    component: () => import('@/views/users/Edit.vue'),
+    component: () => import('@/views/users/Edit'),
     children: [
       {
         path: '',
         name: 'EditProfile',
-        component: () => import('@/views/users/Profile.vue'),
+        component: () => import('@/views/users/Profile'),
         meta: { auth: true }
       },
       // EditAvatar
       {
         path: '/users/1/edit_avatar',
         name: 'EditAvatar',
-        component: () => import('@/views/users/Avatar.vue'),
+        component: () => import('@/views/users/Avatar'),
         meta: { auth: true }
-      },       
+      },
       // EditPassword
       {
         path: '/users/1/edit_password',
         name: 'EditPassword',
-        component: () => import('@/views/users/Password.vue'),
+        component: () => import('@/views/users/Password'),
         meta: { auth: true }
       }
     ]
@@ -52,4 +52,31 @@ export default [
     component: () => import('@/views/articles/Create'),
     meta: { auth: true }
   },
+  // Content
+  {
+    path: '/articles/:articleId/content',
+    name: 'Content',
+    component: () => import('@/views/articles/Content')
+  },
+
+  // Edit
+  {
+    path: '/articles/:articleId/edit',
+    name: 'Edit',
+    component: () => import('@/views/articles/Create'),
+    meta: { auth: true }
+  },
+
+  {
+    path: '/:user',
+    component: () => import('@/views/articles/Column'),
+    children: [
+      {
+        path: '',
+        name: 'Column',
+        component: () => import('@/views/articles/List.vue')
+      }
+    ]
+  },
+
 ]
